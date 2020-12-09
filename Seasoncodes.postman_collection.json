@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "6f940682-cd75-41f8-8300-b8eef3f3e1ca",
+		"name": "Seasoncodes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Season Code By Id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/seasoncode/114",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"seasoncode",
+						"114"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All  Season Code",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/seasoncode/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"seasoncode",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Season Code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {    \"id\": \"110\",\r\n        \"name\": \"sc2\",\r\n         \"seasonDescription\": \"Pongal\",\r\n         \"seasonYear\":\"2020\",\r\n         \"active\" :\"Y\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8084/seasoncode/saveSeasonCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"seasoncode",
+						"saveSeasonCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Season Code",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {    \"id\": \"110\",\r\n        \"name\": \"20%offer\",\r\n         \"seasonDescription\": \"Pongal\",\r\n         \"seasonYear\":\"2020\",\r\n         \"active\" :\"Y\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8084/seasoncode/0_copy_copy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"seasoncode",
+						"0_copy_copy"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
