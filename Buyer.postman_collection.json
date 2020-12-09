@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "bdd58af1-fa07-4833-aa05-735b309ccc2b",
+		"name": "Buyer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Buyer by Id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/buyer/114",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"buyer",
+						"114"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All  Buyers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/buyer/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"buyer",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Buyers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {    \"id\": \"110\",\r\n        \"buyerCode\": \"sc2\",\r\n         \"buyerDescription\": \"Pongal\",\r\n         \"userId\":\"2020\",\r\n         \"active\" :\"Y\",\r\n         \"directorCode\":\"\",\r\n         \"directorDescription\" :\"\",\r\n         \"vpCode\" : \"\",\r\n         \"vpDescription\" : \"\"\r\n\r\n\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8084/buyer/saveBuyer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"buyer",
+						"saveBuyer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Buyer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {    \"id\": \"110\",\r\n        \"name\": \"20%offer\",\r\n         \"seasonDescription\": \"Pongal\",\r\n         \"seasonYear\":\"2020\",\r\n         \"active\" :\"Y\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8084/seasoncode/0_copy_copy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"seasoncode",
+						"0_copy_copy"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
