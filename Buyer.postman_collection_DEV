@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "bdd58af1-fa07-4833-aa05-735b309ccc2b",
+		"name": "Buyer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Buyer Details By Id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{port}}/buyer/213",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"buyer",
+						"213"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All  Buyer details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:{{port}}/buyer/all",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"buyer",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Buyers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {    \"id\": \"213\",\r\n        \"buyerCode\": \"co3\",\r\n         \"buyerDescription\": \"PCR5310Buyer\",\r\n         \"userId\":\"q13478\",\r\n         \"active\" :\"Y\",\r\n         \"directorCode\":\"089\",\r\n         \"directorDescription\" :\"PCRP5310dir\",\r\n         \"vpCode\" : \"111\",\r\n         \"vpDescription\" : \"530\",\r\n         \"sales\": \"qvc\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://{{host}}:{{port}}/buyer/saveBuyer",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"buyer",
+						"saveBuyer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Buyer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {    \"id\": \"110\",\r\n        \"name\": \"20%offer\",\r\n         \"seasonDescription\": \"Pongal\",\r\n         \"seasonYear\":\"2020\",\r\n         \"active\" :\"Y\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://{{host}}:{{port}}/buyer/213",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"buyer",
+						"213"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
